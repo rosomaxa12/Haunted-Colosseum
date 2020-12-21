@@ -10,6 +10,12 @@ let radiants = hud.FindChildTraverse( "HUDElements" ).FindChildTraverse( "topbar
 newUI = hud.FindChildTraverse( "HUDElements" ).FindChildTraverse( "shop" ).FindChildTraverse( "Main" )
 newUI.FindChildTraverse( "GridMainShop" ).FindChildTraverse( "GridNeutralsTab" ).style.visibility = "collapse"
 
+newUI = hud.FindChildTraverse( "PreGame" ).FindChildTraverse( "MainContents" ).FindChildTraverse( "ScreenContainer" )
+newUI.FindChildTraverse( "StrategyScreen" ).FindChildTraverse( "StrategyMap" ).style.visibility = "collapse"
+
+newUI = hud.FindChildTraverse( "PreGame" ).FindChildTraverse( "MainContents" ).FindChildTraverse( "ScreenContainer" )
+newUI.FindChildTraverse( "StrategyScreen" ).FindChildTraverse( "BattlePassHeroData" ).style.visibility = "collapse"
+
 //Bg image
 let pick_screen = hud.FindChildTraverse( "PreGame" )
 let bg = pick_screen.FindChildTraverse( "PregameBG" )
@@ -32,3 +38,4 @@ HidePickScreen()
 let bottom_panels = pick_screen.FindChildTraverse( "BottomPanelsContainer" )
 bottom_panels.FindChildTraverse( "PreMinimapContainer" ).style.visibility = "collapse"
 bottom_panels.FindChildTraverse( "AvailableItemsContainer" ).style.visibility = "collapse"
+

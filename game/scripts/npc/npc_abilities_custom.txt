@@ -86,7 +86,7 @@
 							"Types"			"DOTA_UNIT_TARGET_HERO"
 							"Flags"			"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
 						}
-						"XPAmount"		"2"
+						"XPAmount"		"3"
 						"SplitEvenly"	"0"
 						"GoldAmount"	"3"
 						"ReliableGold"	"0"
@@ -137,7 +137,7 @@
 			{
 				"Passive"       "1"
 				"EffectName"	""
-				"TextureName"	"item_phase_boots"
+				"TextureName"	"hallowin"
 				"States"
                      {
                            "MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"

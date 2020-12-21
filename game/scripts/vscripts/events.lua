@@ -166,11 +166,11 @@ function CConquestGameMode:OnWaypointStartTouch( hero, team, heroIndex )
 		
 		heroHandle:Stop()
 		--DoEntFire( "death_".. m_team_name[team] .."_teleport", "TeleportEntity", hero, 0, self, self )
-		local exit = Entities:FindByName( nil, "death_radiant_teleport" )
-		if team == DOTA_TEAM_BADGUYS then
-			exit = Entities:FindByName( nil, "death_dire_teleport" )
-		end
-		local exitPosition = exit:GetAbsOrigin()
+		-- radiant team exit position
+        local exitPosition = Vector(-1790,2040,294)
+        if team == DOTA_TEAM_BADGUYS then
+            exitPosition = Vector(1830,-2110,294)
+        end
 		-- Teleport the hero
 		FindClearSpaceForUnit( heroHandle, exitPosition, true );
 
