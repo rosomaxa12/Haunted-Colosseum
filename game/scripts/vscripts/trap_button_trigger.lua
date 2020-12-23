@@ -107,11 +107,9 @@ function OnEndTouch(trigger)
 end
 
 function ResetButtonModelRadiant()
-	print( "Trap RESET" )
 	triggerActiveRadiant = true
 end
 
 function ResetButtonModelDire()
-	print( "Trap RESET" )
 	triggerActiveDire = true
 end

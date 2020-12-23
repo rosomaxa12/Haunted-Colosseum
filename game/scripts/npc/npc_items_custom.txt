@@ -87,7 +87,7 @@
 		{
 			"modifier_item_greater_salve"
 			{
-				"TextureName" "halloween_cupcake_spider"
+				"TextureName" "item_greater_salve"
 				"EffectName" "particles/items_fx/healing_flask.vpcf"
 				"EffectAttachType" "follow_origin"
 				"Duration" "%buff_duration"
@@ -182,7 +182,7 @@
 		{
 			"modifier_item_greater_clarity"
 			{
-				"TextureName" "halloween_cupcake_bat"
+				"TextureName" "item_enchanted_mango"
 				"EffectName" "particles/items_fx/healing_clarity.vpcf"
 				"EffectAttachType" "follow_origin"
 				"Duration" "%buff_duration"

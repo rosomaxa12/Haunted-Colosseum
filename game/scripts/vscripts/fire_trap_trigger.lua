@@ -40,7 +40,6 @@ function OnEndTouch(trigger)
 end
 
 function ResetButtonModel()
-	print( "Trap RESET" )
 	triggerActive = true
 end
 

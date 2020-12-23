@@ -170,7 +170,7 @@ function CConquestGameMode:InitGameMode()
 	GameRules:GetGameModeEntity().CConquestGameMode = self
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 1 )
 	GameRules:SetCustomGameSetupAutoLaunchDelay(15)
-	GameRules:SetStrategyTime(10)
+	GameRules:SetStrategyTime(15)
 	GameRules:SetHeroSelectionTime( 30 )
 	GameRules:SetHeroSelectPenaltyTime( 10.0 )
 	GameRules:SetPreGameTime( 10 )
@@ -178,7 +178,7 @@ function CConquestGameMode:InitGameMode()
 	GameRules:SetShowcaseTime( 0 )
 	GameRules:SetTimeOfDay( 0.75 )
 	GameRules:SetFirstBloodActive( true )
-	GameRules:GetGameModeEntity():SetAnnouncerDisabled( false )
+	GameRules:GetGameModeEntity():SetAnnouncerDisabled( true )
 	GameRules:GetGameModeEntity():SetRecommendedItemsDisabled( false )
 	GameRules:SetUseUniversalShopMode( true )
 	GameRules:SetHideKillMessageHeaders( true )
@@ -199,7 +199,6 @@ function CConquestGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetFountainConstantManaRegen( 0 )
 	GameRules:GetGameModeEntity():SetCustomBuybackCooldownEnabled( true )
 	GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( CConquestGameMode, "ExecuteOrderFilter" ), self )
-	GameRules:GetGameModeEntity():SetTPScrollSlotItemOverride( "item_force_staff" )
 
 	-- Hook into game events
 	ListenToGameEvent( "npc_spawned", Dynamic_Wrap( CConquestGameMode, "OnNPCSpawned" ), self )
@@ -462,6 +461,7 @@ function CConquestGameMode:ModifyExperienceFilter( filterTable )
 	return true
 end
 
+
 ---------------------------------------------------------------------------
 -- Filters
 ---------------------------------------------------------------------------
@@ -470,8 +470,8 @@ function CConquestGameMode:ExecuteOrderFilter( filterTable )
 	local orderType = filterTable["order_type"]
 	local playerID = filterTable["issuer_player_id_const"]
 	if orderType == DOTA_UNIT_ORDER_BUYBACK then 
-		-- Set the buyback cooldown to 3 minutes for this player
-		PlayerResource:SetCustomBuybackCooldown( playerID, 180 )
+		-- Set the buyback cooldown to 4 minutes for this player
+		PlayerResource:SetCustomBuybackCooldown( playerID, 240 )
 		return true
 	end
 	if orderType == DOTA_UNIT_ORDER_GLYPH then

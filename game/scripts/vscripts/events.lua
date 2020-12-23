@@ -21,7 +21,7 @@ function CConquestGameMode:OnGameRulesStateChange()
 		_G.game_in_progress = true
 		CConquestGameMode:EnableWaypoint( DOTA_TEAM_GOODGUYS )
 		CConquestGameMode:EnableWaypoint( DOTA_TEAM_BADGUYS )
-		if GetMapName() == "haunted_colosseum" then
+		if GetMapName() == "temple_colosseum" then
 			EmitGlobalSound("Conquest.Stinger.GameBegin")
 		else
 			EmitGlobalSound("Conquest.Stinger.GameBegin.Generic")
@@ -81,20 +81,20 @@ function CConquestGameMode:OnEntityKilled( event )
 			difference = direTotal - radiantTotal
 		end
 		if difference > 500 and difference <= 2000 then
-			teamTime = 15
+			teamTime = 5
 		elseif difference > 2000 and difference <= 4000 then
-			teamTime = 25
+			teamTime = 15
 		elseif difference > 4000 then
-			teamTime = 35
+			teamTime = 25
 		end
 
 		-- Change the respawn time based on the hero's level
 		local baseTime = 0
 		local level = killedUnit:GetLevel()
 		if level > 9 and level < 20 then
-			baseTime = 10
+			baseTime = 5
 		elseif level >= 20 then
-			baseTime = 20
+			baseTime = 15
 		end
 
 		local respawnTime = killedUnit:GetRespawnTime()

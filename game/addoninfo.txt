@@ -1,17 +1,12 @@
 "Colosseum"
 {
-    maps			"temple_colosseum desert_colosseum"
+    maps			"temple_colosseum"
     "IsPlayable"	        "1"
     "EnablePickRules"	    "0"
     "HeroGuidesSupported"   "1"
 	"ForceDefaultGuide"		"0"
-	"MinimalPrecache"	    "1"
 	"EventGame"			    "1"
 	"temple_colosseum"
-	{
-					"MaxPlayers"                    "10"
-	}
-	"desert_colosseum"
 	{
 					"MaxPlayers"                    "10"
 	}

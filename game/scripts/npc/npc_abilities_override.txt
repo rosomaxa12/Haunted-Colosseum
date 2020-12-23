@@ -13,8 +13,37 @@
   "item_tpscroll"                       "REMOVE"
 
   "Version"		                        "1.1"
+  
+  /////////ABILITIES NERF////////////////
 	
-	/////////ABILITIES NERF////////////////
+  	//=================================================================================================================
+	// Legion Commander
+	//=================================================================================================================
+	"legion_commander_duel"
+	{
+		"AbilitySpecial"
+		{
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"reward_damage"			"5 10 15"
+				"LinkedSpecialBonus"	"special_bonus_unique_legion_commander"
+			}
+		}
+	}
+	
+	"special_bonus_unique_legion_commander"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"15"
+				"ad_linked_ability"			"legion_commander_duel"
+			}
+		}
+	}
 	
 	//=================================================================================================================
 	// Silencer 
@@ -392,5 +421,15 @@
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"102.0"
+	}
+	
+	"item_aghanims_shard"
+	{
+		"ItemInitialStockTime"			"430.0"
+	}
+	
+		"item_infused_raindrop"
+	{
+		"ItemInitialStockTime"			"70.0"
 	}
 }
